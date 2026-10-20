@@ -15,6 +15,14 @@
   .btn{display:block;text-align:center;background:var(--c);color:#fff;text-decoration:none;font-weight:bold;font-size:18px;padding:14px;border-radius:8px;margin-top:12px}
   .warn{display:none;background:#fff3cd;color:#664d03;border:1px solid #ffe69c;border-radius:8px;padding:10px;margin-bottom:12px}
   ol{padding-inline-start:20px;margin:6px 0}
+  .by{text-align:center;margin-top:12px;font-size:15px;color:var(--d)}
+  @media (prefers-color-scheme:dark){.by{color:#cfe3f5}}
+  table{border-collapse:collapse;width:100%;font-size:13px;margin:4px 0 10px}
+  th{background:#217346;color:#fff}
+  td,th{border:1px solid #b9c4cc;padding:4px 8px;text-align:right}
+  .rn{background:#f0f0f0;color:#555;text-align:center;width:22px}
+  .scroll{overflow-x:auto}
+  .note{background:#fff7e0;color:#533f03;border:1px solid #f0d48a;border-radius:6px;padding:6px 10px;font-size:13px}
   .ft{text-align:center;font-size:12px;color:#777;margin-top:20px}
 </style>
 </head>
@@ -24,6 +32,7 @@
     <h1>📝 أتمتة تسجيل الغياب</h1>
     <div>إضافة لمتصفح فايرفوكس تسجّل الغياب والغياب بعذر تلقائياً في بوابة عمان التعليمية من بيانات الإكسل. مجانية، ولا ترسل أي بيانات خارج متصفحك.</div>
     <div id="warn" class="warn">انتبه: أنت لا تستخدم فايرفوكس. افتح هذه الصفحة في متصفح <b>فايرفوكس</b> ليعمل التثبيت.</div>
+    <div class="by">برمجة وتصميم: <b>محمد البوسعيدي</b><br>أخصائي أنظمة مدرسية</div>
     <a class="btn" href="moe-attendance-auto.xpi">⬇️ ثبّت الإضافة</a>
   </div>
   <div class="card">
@@ -36,10 +45,24 @@
     </ol>
   </div>
   <div class="card">
+    <b>📊 شكل بيانات الإكسل</b>
+    <div>انسخ الأعمدة من الإكسل كما هي (بدون صف العناوين) والصقها في مربع الأداة، بإحدى الصيغتين:</div>
+    <div><b>الصيغة الأولى (الأساسية):</b> اسم الطالب ← الصف/الفصل ← التاريخ</div>
+    <div class="scroll"><table><tr><th class="rn"></th><th>A</th><th>B</th><th>C</th></tr>
+      <tr><td class="rn">1</td><td>أحمد بن سالم بن علي الهنائي</td><td>العاشر/1</td><td>27/09/2026</td></tr>
+      <tr><td class="rn">2</td><td>خالد بن محمد بن يوسف البلوشي</td><td>الحادي عشر/3</td><td>27/09/2026</td></tr>
+      <tr><td class="rn">3</td><td>سعيد بن ناصر بن حمد الكندي</td><td>التاسع/8</td><td>2026-09-24، 2026-09-23</td></tr></table></div>
+    <div><b>الصيغة الثانية (بديلة):</b> اسم الطالب ← الصف ← الفصل ← التاريخ</div>
+    <div class="scroll"><table><tr><th class="rn"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+      <tr><td class="rn">1</td><td>أحمد بن سالم بن علي الهنائي</td><td>العاشر</td><td>1</td><td>27/09/2026</td></tr>
+      <tr><td class="rn">2</td><td>خالد بن محمد بن يوسف البلوشي</td><td>الحادي عشر</td><td>3</td><td>27/09/2026</td></tr></table></div>
+    <div class="note">💡 يمكن كتابة أكثر من تاريخ لنفس الطالب في الخلية الواحدة بفاصلة. وتُكتب أسماء الصفوف كما في البوابة (التاسع، العاشر، الحادي عشر، الثاني عشر). الأسماء في الأمثلة وهمية.</div>
+  </div>
+  <div class="card">
     <b>طريقة الاستخدام باختصار</b>
     <ol>
       <li>اضغط الزر 📝 لفتح اللوحة، واختر «غياب» أو «غياب بعذر».</li>
-      <li>الصق بيانات الإكسل (الصف، الفصل، التاريخ، اسم الطالب، أو اسم الطالب ثم الصف/الفصل ثم التاريخ).</li>
+      <li>الصق بيانات الإكسل بإحدى الصيغتين الموضّحتين أعلاه.</li>
       <li>اضغط «بدء» واترك الأداة تعمل، وتابع الإحصائيات في المربع الظاهر.</li>
       <li>في النهاية راجع «التقرير»، واستخدم «مراجعة» للأسماء غير المتطابقة.</li>
     </ol>
