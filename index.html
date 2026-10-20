@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أتمتة تسجيل الغياب — بوابة عمان التعليمية</title>
+<style>
+  :root{--c:#2c7;--d:#34495e;--bg:#eef2f6;--fg:#222;--card:#fff}
+  @media (prefers-color-scheme:dark){:root{--bg:#161b22;--fg:#e6e6e6;--card:#1f2630}}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+  .wrap{max-width:640px;margin:0 auto;padding:24px 16px}
+  .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.12);margin-bottom:16px}
+  h1{font-size:22px;margin:0 0 6px;color:var(--d)}
+  @media (prefers-color-scheme:dark){h1{color:#cfe3f5}}
+  .btn{display:block;text-align:center;background:var(--c);color:#fff;text-decoration:none;font-weight:bold;font-size:18px;padding:14px;border-radius:8px;margin-top:12px}
+  .warn{display:none;background:#fff3cd;color:#664d03;border:1px solid #ffe69c;border-radius:8px;padding:10px;margin-bottom:12px}
+  ol{padding-inline-start:20px;margin:6px 0}
+  .ft{text-align:center;font-size:12px;color:#777;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>📝 أتمتة تسجيل الغياب</h1>
+    <div>إضافة لمتصفح فايرفوكس تسجّل الغياب والغياب بعذر تلقائياً في بوابة عمان التعليمية من بيانات الإكسل. مجانية، ولا ترسل أي بيانات خارج متصفحك.</div>
+    <div id="warn" class="warn">انتبه: أنت لا تستخدم فايرفوكس. افتح هذه الصفحة في متصفح <b>فايرفوكس</b> ليعمل التثبيت.</div>
+    <a class="btn" href="moe-attendance-auto.xpi">⬇️ ثبّت الإضافة</a>
+  </div>
+  <div class="card">
+    <b>طريقة التثبيت</b>
+    <ol>
+      <li>اضغط الزر الأخضر أعلاه من متصفح فايرفوكس.</li>
+      <li>إذا ظهرت نافذة "إضافة"، اضغط <b>Add / إضافة</b>.</li>
+      <li>إذا نزل الملف دون أن تظهر النافذة: افتح الملف المحمّل بفايرفوكس أو اسحبه إلى نافذة المتصفح، ثم اضغط <b>إضافة</b>.</li>
+      <li>افتح صفحة تسجيل الغياب في البوابة، وستجد الزر 📝 أسفل يسار الصفحة.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <b>طريقة الاستخدام باختصار</b>
+    <ol>
+      <li>اضغط الزر 📝 لفتح اللوحة، واختر «غياب» أو «غياب بعذر».</li>
+      <li>الصق بيانات الإكسل (الصف، الفصل، التاريخ، اسم الطالب، أو اسم الطالب ثم الصف/الفصل ثم التاريخ).</li>
+      <li>اضغط «بدء» واترك الأداة تعمل، وتابع الإحصائيات في المربع الظاهر.</li>
+      <li>في النهاية راجع «التقرير»، واستخدم «مراجعة» للأسماء غير المتطابقة.</li>
+    </ol>
+  </div>
+  <div class="ft">© 2026 — برمجة وتصميم: محمد البوسعيدي<br>أخصائي أنظمة مدرسية · جميع الحقوق محفوظة<br>أداة مستقلة وليست من وزارة التربية والتعليم</div>
+</div>
+<script>
+  if (!/firefox/i.test(navigator.userAgent)) document.getElementById('warn').style.display = 'block';
+</script>
+</body>
+</html>
